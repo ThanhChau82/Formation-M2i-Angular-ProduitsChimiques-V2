@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Produit } from '../models/produit';
 import { ProduitService } from '../services/produit-service.service';
 
@@ -16,6 +17,13 @@ export class ListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  delete(id : number) : void {
+    if (prompt("Voulez-vous vraiment supprimer ce produit ?")) {
+      this.produitService.delete(id);
+      this.produits = this.produitService.getAll();
+    }
   }
 
 }

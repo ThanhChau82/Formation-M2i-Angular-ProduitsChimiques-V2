@@ -28,7 +28,7 @@
       <td>{{p.localisation}}</td>
       <td><button type="button" class="btn btn-info" [routerLink]="['/edit']">Consulter</button></td>
       <td><button type="button" class="btn btn-success" [routerLink]="['/modify']">Modifier</button></td>
-      <td><button type="button" class="btn btn-danger" [routerLink]="['/delete']">Supprimer</button></td>
+      <td><button type="button" class="btn btn-danger" (click)="delete(p.id)">Supprimer</button></td>
       </tr>
   </tbody>
 </table>
