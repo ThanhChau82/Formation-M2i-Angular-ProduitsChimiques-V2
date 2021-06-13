@@ -1,1 +1,36 @@
-<p>list works!</p>
+<h1>Liste des produits chimiques</h1>
+<button type="button" class="btn btn-primary" [routerLink]="['/add']">Ajouter un produit</button>
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Nom</th>
+      <th>CAS</th>
+      <th>Formule</th>
+      <th>Masse moléculaire</th>
+      <th>Produit description</th>
+      <th>Quantité</th>
+      <th>Localisation</th>
+      <th>Actions</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of produits">
+      <td>{{p.id}}</td>
+      <td>{{p.nom}}</td>
+      <td>{{p.cas}}</td>
+      <td>{{p.formule}}</td>
+      <td>{{p.masseMoleculaire}}</td>
+      <td>{{p.description}}</td>
+      <td>{{p.quantite}}</td>
+      <td>{{p.localisation}}</td>
+      <td><button type="button" class="btn btn-info" [routerLink]="['/edit']">Consulter</button></td>
+      <td><button type="button" class="btn btn-success" [routerLink]="['/modify']">Modifier</button></td>
+      <td><button type="button" class="btn btn-danger" [routerLink]="['/delete']">Supprimer</button></td>
+      </tr>
+  </tbody>
+</table>
+
+
