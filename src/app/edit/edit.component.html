@@ -1,1 +1,12 @@
-<p>edit works!</p>
+<h2>Modification du produit <span [ngStyle]="{'font-style' :'italic', 'color' : 'green'}">#{{produit.id}}</span></h2>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{produit.nom}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">N° CAS : {{produit.cas}}</h6>
+    <h6 class="card-subtitle mb-2 text-muted">Formule linéaire : {{produit.formule}}</h6>
+    <h6 class="card-subtitle mb-2 text-muted">Masse moléculaire : {{produit.masseMoleculaire}}</h6>
+    <p class="card-text">Description : {{produit.description}}</p>
+    <a href="https://www.inrs.fr/risques/classification-etiquetage-produits-chimiques/comprendre-systemes-etiquetage-produits-chimiques.html" class="card-link" target="_blank">Consulter les risques</a>
+  </div>
+</div>
+<button type="button" class="btn btn-primary" [routerLink]="['/list']">Retourner</button>
