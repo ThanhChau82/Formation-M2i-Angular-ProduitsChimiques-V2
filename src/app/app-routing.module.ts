@@ -8,7 +8,7 @@ import { ModifyComponent } from './modify/modify.component';
 const routes: Routes = [
   {path : 'list', component : ListComponent},
   {path : 'edit/:id', component : EditComponent},
-  {path : 'modify', component : ModifyComponent},
+  {path : 'modify/:id', component : ModifyComponent},
   {path : 'add', component : AddComponent},
   {path : '', redirectTo : 'list', pathMatch : 'full'}
 ];
