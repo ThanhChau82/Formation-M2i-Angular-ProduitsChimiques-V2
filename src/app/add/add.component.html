@@ -1,1 +1,36 @@
-<p>add works!</p>
+<h2>Ajout d'un nouveau produit</h2>
+<form (ngSubmit)="ajouter(f)" #f="ngForm">
+  <div class="mb-3">
+    <label for="id" class="form-label">Id</label>
+    <input type="number" class="form-control" id="id" required ngModel name="id">
+  </div>
+  <div class="mb-3">
+    <label for="nom" class="form-label">Nom</label>
+    <input type="text" class="form-control" id="nom" required ngModel name="nom">
+  </div>
+  <div class="mb-3">
+    <label for="cas" class="form-label">CAS</label>
+    <input type="text" class="form-control" id="cas" required ngModel name="cas">
+  </div>
+  <div class="mb-3">
+    <label for="formule" class="form-label">Formule linaire</label>
+    <input type="text" class="form-control" id="formule" required ngModel name="formule">
+  </div>
+  <div class="mb-3">
+    <label for="masse" class="form-label">Masse moléculaire</label>
+    <input type="text" class="form-control" id="masse" required ngModel name="masse">
+  </div>
+  <div class="mb-3">
+    <label for="description" class="form-label">Produit description</label>
+    <input type="text" class="form-control" id="description" ngModel name="description">
+  </div>
+  <div class="mb-3">
+    <label for="quantite" class="form-label">Quantité</label>
+    <input type="number" class="form-control" id="quantite" ngModel name="quantite">
+  </div>
+  <div class="mb-3">
+    <label for="localisation" class="form-label">Localisation</label>
+    <input type="text" class="form-control" id="localisation" ngModel name="localisation">
+  </div>
+  <button type="submit" class="btn btn-primary">Valider</button>
+</form>
